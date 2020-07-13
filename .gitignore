@@ -1,0 +1,6 @@
+targets.txt
+*.sublime-project
+*.sublime-workspace
+.vscode/
+shellpyvenv/
+*.pyc
