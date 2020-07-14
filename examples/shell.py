@@ -1,6 +1,6 @@
-from ShellPy.Engine.Security.Authentication import authenticationManager
-from ShellPy.Engine.UserManagement import UserManager
-from ShellPy.Engine.Commands import commandsManager
+from .Engine.Security.Authentication import authenticationManager
+from .Engine.UserManagement import UserManager
+from .Engine.Commands import commandsManager
 
 userManager = UserManager.UserManager()
 userManager.addUser('admin','admin')   #Add users
