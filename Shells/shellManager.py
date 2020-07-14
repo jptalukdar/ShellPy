@@ -1,14 +1,14 @@
-from Engine.Display import displayManager
-from Engine.Commands import commandsManager
-from Engine.Context import contextManager
-from Engine.Security.Authentication import authenticationManager
+from ShellPy.Engine.Display import displayManager
+from ShellPy.Engine.Commands import commandsManager
+from ShellPy.Engine.Context import contextManager
+from ShellPy.Engine.Security.Authentication import authenticationManager
 import time
 
 def runShellEngine():
 	displayManager.stdout('Welcome To ShellPy',end='\n')
 	user = displayManager.stdin('User: ')
 	password = displayManager.getPass('password: ')
-	if authenticationManager.authorise(user,password) == False:
+	if authenticationManager.authorise(user,password) == False:				#Match user , pass with existing records
 		displayManager.stdout('Incorrect password, Closing')
 		time.sleep(2)
 		return

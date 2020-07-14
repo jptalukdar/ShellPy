@@ -1,3 +1,8 @@
-from Shells import shellManager
+from ShellPy.Shells import shellManager
 
-shellManager.runShellEngine()
+def runShellEngine():
+    shellManager.runShellEngine()
+
+
+if __name__ == '__main__':
+    runShellEngine()

@@ -1,7 +1,7 @@
 import subprocess
 import os
-from Engine.Display import displayManager
-from Engine.Context import contextManager
+from ShellPy.Engine.Display import displayManager
+from ShellPy.Engine.Context import contextManager
 
 class commands:
 	commandsList = {}
@@ -9,10 +9,7 @@ class commands:
 	def addCommand(self,funcname,func):
 		self.commandsList[funcname]=func
 
-	def add(funcname):
-		def wrapper(func):
-			commands.addCommand(commands,funcname,func)
-		return wrapper
+	
 
 	def execute(self,funcname,params=None):
 		return self.commandsList[funcname](params)
@@ -24,6 +21,11 @@ class commands:
 		else:
 			return False,None
 __commands = commands()
+
+def add(funcname):
+		def wrapper(func):
+			commands.addCommand(commands,funcname,func)
+		return wrapper
 
 def cleanData(data):
 	return data.strip(' ')
@@ -54,25 +56,3 @@ def parseCommand(data):
 	runCommand(data)
 
 
-@commands.add('echo')
-def echo(name):
-	#displayManager.stdout(name)
-	return name
-
-@commands.add('exit')
-def handleExit(name):
-	exit(0)
-
-
-@commands.add('save')
-def handleSave(context):
-	print('Saving')
-	pass
-	
-@commands.add('create')
-def handleCreate(context):
-	pass
-
-@commands.add('show')
-def handleShow(context):
-	pass
