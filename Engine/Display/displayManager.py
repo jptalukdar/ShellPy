@@ -12,3 +12,7 @@ def stdin(promt=None):
 def getPass(promt):
 	import getpass
 	return getpass.getpass(promt)
+
+def dispout(msg,end='\n',disp='stdin'):
+	if disp=='stdin':
+		stdout(msg,end)

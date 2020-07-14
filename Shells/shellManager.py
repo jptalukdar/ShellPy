@@ -5,28 +5,28 @@ from ShellPy.Engine.Security.Authentication import authenticationManager
 import time
 
 def runShellEngine():
-	displayManager.stdout('Welcome To ShellPy',end='\n')
+	displayManager.dispout('Welcome To ShellPy',end='\n')
 	user = displayManager.stdin('User: ')
 	password = displayManager.getPass('password: ')
 	if authenticationManager.authorise(user,password) == False:				#Match user , pass with existing records
-		displayManager.stdout('Incorrect password, Closing')
+		displayManager.dispout('Incorrect password for {}, Closing'.format(user))
 		time.sleep(2)
 		return
 	else:
-		context= contextManager.contextManager(user=user)
-		displayManager.stdout("Welcome {}".format(user))
+		context= contextManager.contextManager(user=user)	#Initialize a context object to store context values
+		displayManager.dispout("Welcome {}".format(user))
 
 
 	while(1):
 		data = displayManager.stdin('{}$ '.format(user))
-		context.add(data=data)
+		context.add(input=data)				#Store Input in context object
 		try:
-			data= commandsManager.runCommand(context)
+			data= commandsManager.runCommand(context)		
 			if data != None:
-				displayManager.stdout(data)
+				displayManager.dispout(data)
 		except Exception as ex:
-			displayManager.stdout('Error Occured: {}'.format(ex))
+			displayManager.dispout('Error Occured: {}'.format(ex))
 
-		#displayManager.stdout('You Have Entered {}'.format(data))
+		#displayManager.dispout('You Have Entered {}'.format(data))
 
 
