@@ -56,7 +56,7 @@ def parseCommand(data):			#separate commands and parameters
 	dataTokensIndex=data.find(' ')
 	if dataTokensIndex != -1:
 		command=data[:dataTokensIndex]
-		params=data[dataTokensIndex:]
+		params=cleanData(data[dataTokensIndex:])
 	else:
 		command=data
 		params=None
