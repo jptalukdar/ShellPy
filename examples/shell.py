@@ -1,6 +1,14 @@
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+                    datefmt='%m-%d %H:%M',
+                    filename='ShellPymyapp.log',
+                    filemode='w+')
 from ShellPy.Engine.Security.Authentication import authenticationManager
 from ShellPy.Engine.UserManagement import UserManager
 from ShellPy.Engine.Commands import commandsManager
+
+logger = logging.getLogger('ShellPy')
 
 userManager = UserManager.UserManager()
 userManager.addUser('admin','admin')   #Add users
