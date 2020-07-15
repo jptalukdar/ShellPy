@@ -8,3 +8,5 @@ build/build
 build/dist
 build/ShellPy
 build/ShellPy.egg-info
+*.log
+examples/*.log
