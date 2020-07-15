@@ -5,7 +5,10 @@ class contextManager():
 	
 	def __init__(self,**kwargs):
 		self.sysParam.update(kwargs)
-		
+	
+	def clear(self):
+		return self.contextObjects.clear()
+
 	def get(self,key):
 		return self.contextObjects.get(key)
 

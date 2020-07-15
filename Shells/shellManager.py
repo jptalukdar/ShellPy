@@ -21,8 +21,8 @@ def runShellEngine():
 		data = displayManager.stdin('{}$ '.format(user))
 		context.add(input=data)				#Store Input in context object
 		try:
-			data= commandsManager.runCommand(context)		
-			if data != None:
+			data= commandsManager.runCommand(context)
+			if (type(data) !=type(None)):		#some data doesn't support boolean operations hence the type
 				displayManager.dispout(data)
 		except Exception as ex:
 			displayManager.dispout('Error Occured: {}'.format(ex))
