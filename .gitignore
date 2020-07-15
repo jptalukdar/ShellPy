@@ -4,3 +4,7 @@ targets.txt
 .vscode/
 shellpyvenv/
 *.pyc
+build/build
+build/dist
+build/ShellPy
+build/ShellPy.egg-info

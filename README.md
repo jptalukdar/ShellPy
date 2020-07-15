@@ -21,3 +21,7 @@ from ShellPy.Shells import shellManager
 shellManager.runShellEngine()
 ```
 This initialises and executes the shell
+
+## Build
+You can build and install the package by executing build.sh or build.bat inside folder build
+This assumes you have python3 as the default python
