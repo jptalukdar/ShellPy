@@ -4,11 +4,11 @@ logging.basicConfig(level=logging.DEBUG,
                     datefmt='%m-%d %H:%M',
                     filename='ShellPymyapp.log',
                     filemode='w+')
-from ShellPy.Engine.Security.Authentication import authenticationManager
-from ShellPy.Engine.UserManagement import UserManager
-from ShellPy.Engine.Commands import commandsManager
+from shellpy.Engine.Security.Authentication import authenticationManager
+from shellpy.Engine.UserManagement import UserManager
+from shellpy.Engine.Commands import commandsManager
 
-logger = logging.getLogger('ShellPy')
+logger = logging.getLogger('shellpy')
 
 userManager = UserManager.UserManager()
 userManager.addUser('admin','admin')   #Add users
@@ -46,5 +46,5 @@ def handleDo(context):
 
 
 
-from ShellPy.Shells import shellManager
+from shellpy.Shells import shellManager
 shellManager.runShellEngine()

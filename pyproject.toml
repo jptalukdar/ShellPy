@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "shellpy"
+version = "0.1.0"
+description = "ShellPy allows you to create and run custom shell where each statement is processed by your custom python functions"
+authors = ["Author <author@example.com>"]
+readme = "README.md"
+packages = [{include = "shellpy"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

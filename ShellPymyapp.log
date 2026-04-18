@@ -1,0 +1,18 @@
+04-18 16:55 root         DEBUG    User admin added
+04-18 16:55 root         DEBUG    Available Users : dict_keys(['admin'])
+04-18 16:55 root         DEBUG    User admin added
+04-18 16:55 root         DEBUG    Available Users : dict_keys(['admin'])
+04-18 16:55 root         DEBUG    (<class 'shellpy.Engine.UserManagement.UserManager.UserManager'>, <class 'module'>)
+04-18 16:55 root         INFO     User manager added
+04-18 16:55 root         DEBUG    Available Users : dict_keys(['admin'])
+04-18 16:55 root         DEBUG    Password Matched, Granting entry
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: hello
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: ls
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: dir
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: help
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: echo
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: echo
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: show
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: do
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: do
+04-18 16:56 shellpy.Engine.Commands INFO     Executing function: do.run
