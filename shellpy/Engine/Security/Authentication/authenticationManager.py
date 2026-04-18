@@ -1,12 +1,8 @@
 
-from ShellPy.Engine.UserManagement import UserManager
+from shellpy.Engine.UserManagement import UserManager
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
-                    datefmt='%m-%d %H:%M',
-                    filename='D:/Github/ShellPy/LOGS/ShellPymyapp.log',
-                    filemode='a')
-logger = logging.getLogger('ShellPy.Engine.Authentication')
+
+logger = logging.getLogger('shellpy.Engine.Authentication')
 logger.setLevel(logging.DEBUG)
 fh = logging.FileHandler('spam.log')
 fh.setLevel(logging.DEBUG)

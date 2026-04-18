@@ -1,0 +1,34 @@
+# ShellPy
+ShellPy allows you to create and run custom shell where each statement is processed by your custom python functions
+
+## Goal
+To create an shell program that allows remote access with Authentication and encryption.
+Each statement in the shell will be evaluated by user written python code with a separation with os shell
+
+## Usage
+Create any python script
+
+```python
+from shellpy.Engine.Commands import commandsManager
+@commands.add('echo') #echo or the name of the command you want to perform
+def handlemytool(context): # A context object will be passed. Context object contains important information about the statement executed 
+    return context.get('params') # params gives you the parameters pass with the command
+```
+commandsManager allows you to evaluate commands and perform action on them
+
+```python
+from shellpy.Shells import shellManager
+shellManager.runShellEngine()
+```
+This initialises and executes the shell
+
+## Build & Run
+First, use poetry to install the package and its dependencies.
+```bash
+poetry install
+```
+
+Now you can run any of the example shells directly:
+```bash
+poetry run python examples/basic/shell.py
+```

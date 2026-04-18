@@ -1,7 +1,7 @@
-from ShellPy.Engine.Display import displayManager
-from ShellPy.Engine.Commands import commandsManager
-from ShellPy.Engine.Context import contextManager
-from ShellPy.Engine.Security.Authentication import authenticationManager
+from shellpy.Engine.Display import displayManager
+from shellpy.Engine.Commands import commandsManager
+from shellpy.Engine.Context import contextManager
+from shellpy.Engine.Security.Authentication import authenticationManager
 import time
 
 def runShellEngine():

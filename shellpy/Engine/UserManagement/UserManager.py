@@ -1,11 +1,16 @@
 import hashlib
 import logging
+<<<<<<< Updated upstream:Engine/UserManagement/UserManager.py
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
                     datefmt='%m-%d %H:%M',
                     filename='D:/Github/ShellPy/LOGS/ShellPy_Users.log',
                     filemode='w+')
 logger = logging.getLogger('ShellPy.Engine.UserManager')
+=======
+
+logger = logging.getLogger('shellpy.Engine.UserManager')
+>>>>>>> Stashed changes:shellpy/Engine/UserManagement/UserManager.py
 logger.setLevel(logging.DEBUG)
 
 

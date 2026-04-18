@@ -1,14 +1,9 @@
 import subprocess
 import os
-from ShellPy.Engine.Display import displayManager
-from ShellPy.Engine.Context import contextManager
+from shellpy.Engine.Display import displayManager
+from shellpy.Engine.Context import contextManager
 import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
-                    datefmt='%m-%d %H:%M',
-                    filename='D:/Github/ShellPy/LOGS/ShellPymyapp.log',
-                    filemode='w+')
-logger = logging.getLogger('ShellPy.Engine.Commands')
+logger = logging.getLogger('shellpy.Engine.Commands')
 logger.setLevel(logging.DEBUG)
 fh = logging.FileHandler('spam.log')
 fh.setLevel(logging.DEBUG)

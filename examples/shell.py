@@ -1,7 +1,22 @@
+<<<<<<< Updated upstream:examples/shell.py
 from ShellPy.Engine.Security.Authentication import authenticationManager
 from ShellPy.Engine.UserManagement import UserManager
 from ShellPy.Engine.Commands import commandsManager
 
+=======
+import logging
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
+                    datefmt='%m-%d %H:%M',
+                    filename='ShellPymyapp.log',
+                    filemode='w+')
+from shellpy.Engine.Security.Authentication import authenticationManager
+from shellpy.Engine.UserManagement import UserManager
+from shellpy.Engine.Commands import commandsManager
+
+logger = logging.getLogger('shellpy')
+
+>>>>>>> Stashed changes:examples/basic/shell.py
 userManager = UserManager.UserManager()
 userManager.addUser('admin','admin')   #Add users
 
@@ -38,5 +53,5 @@ def handleDo(context):
 
 
 
-from ShellPy.Shells import shellManager
+from shellpy.Shells import shellManager
 shellManager.runShellEngine()
