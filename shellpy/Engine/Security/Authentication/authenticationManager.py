@@ -1,8 +1,8 @@
 
-from ShellPy.Engine.UserManagement import UserManager
+from shellpy.Engine.UserManagement import UserManager
 import logging
 
-logger = logging.getLogger('ShellPy.Engine.Authentication')
+logger = logging.getLogger('shellpy.Engine.Authentication')
 logger.setLevel(logging.DEBUG)
 
 userManager = UserManager.UserManager()

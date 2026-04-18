@@ -4,14 +4,14 @@ logging.basicConfig(level=logging.DEBUG,
                     datefmt='%m-%d %H:%M',
                     filename='ShellPymyapp.log',
                     filemode='w+')
-from ShellPy.Engine.Security.Authentication import authenticationManager
-from ShellPy.Engine.UserManagement import UserManager
-from ShellPy.Engine.Commands import commandsManager
-from ShellPy.Engine.Display import displayManager
-from ShellPy.Engine.Utility import utility
+from shellpy.Engine.Security.Authentication import authenticationManager
+from shellpy.Engine.UserManagement import UserManager
+from shellpy.Engine.Commands import commandsManager
+from shellpy.Engine.Display import displayManager
+from shellpy.Engine.Utility import utility
 
 import pandas as pd
-logger = logging.getLogger('ShellPy')
+logger = logging.getLogger('shellpy')
 
 userManager = UserManager.UserManager()
 userManager.addUser('admin','admin')   #Add users
@@ -73,5 +73,5 @@ def handleCount(context):
 	else:
 		return "No Dataset Loaded"
 	
-from ShellPy.Shells import shellManager
+from shellpy.Shells import shellManager
 shellManager.runShellEngine()

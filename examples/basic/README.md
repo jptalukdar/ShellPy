@@ -1,8 +1,8 @@
 # Usage
-! ShellPy must be build first
+Run the shell from the repository root using Poetry:
 
-```python
-python shell.py
+```bash
+poetry run python examples/basic/shell.py
 ```
 
 Use credentials as admin/admin

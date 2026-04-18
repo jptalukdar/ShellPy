@@ -9,7 +9,7 @@ Each statement in the shell will be evaluated by user written python code with a
 Create any python script
 
 ```python
-from ShellPy.Engine.Commands import commandsManager
+from shellpy.Engine.Commands import commandsManager
 @commands.add('echo') #echo or the name of the command you want to perform
 def handlemytool(context): # A context object will be passed. Context object contains important information about the statement executed 
     return context.get('params') # params gives you the parameters pass with the command
@@ -17,11 +17,18 @@ def handlemytool(context): # A context object will be passed. Context object con
 commandsManager allows you to evaluate commands and perform action on them
 
 ```python
-from ShellPy.Shells import shellManager
+from shellpy.Shells import shellManager
 shellManager.runShellEngine()
 ```
 This initialises and executes the shell
 
-## Build
-You can build and install the package by executing build.sh or build.bat inside folder build
-This assumes you have python3 as the default python
+## Build & Run
+First, use poetry to install the package and its dependencies.
+```bash
+poetry install
+```
+
+Now you can run any of the example shells directly:
+```bash
+poetry run python examples/basic/shell.py
+```

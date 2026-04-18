@@ -1,9 +1,9 @@
 import subprocess
 import os
-from ShellPy.Engine.Display import displayManager
-from ShellPy.Engine.Context import contextManager
+from shellpy.Engine.Display import displayManager
+from shellpy.Engine.Context import contextManager
 import logging
-logger = logging.getLogger('ShellPy.Engine.Commands')
+logger = logging.getLogger('shellpy.Engine.Commands')
 logger.setLevel(logging.DEBUG)
 
 class commands:
